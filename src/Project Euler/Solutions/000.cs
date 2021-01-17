@@ -1,7 +1,7 @@
 ﻿namespace ProjectEuler
 {
     using System;
-    using System.Collections.Generic;
+    using System.Numerics;
 
     /// <summary>
     /// Class containing all the solutions of the Project Euler problems.
@@ -49,6 +49,18 @@
             }
 
             return true;
+        }
+
+        public static BigInteger Factorial(long n)
+        {
+            if (n == 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return n * Factorial(n - 1);
+            }
         }
     }
 }
