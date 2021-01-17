@@ -11,7 +11,15 @@
         /// <returns>6857</returns>
         public static long Problem3()
         {
-            List<long> pfactors = GetPrimeFactors(600851475143);
+            List<long> pfactors = new List<long>();
+
+            for (long i = 1; i <= 600851475143; i++)
+            {
+                if (600851475143 % i == 0 && IsPrime(i))
+                {
+                    pfactors.Add(i);
+                }
+            }
 
             return pfactors.Last();
         }

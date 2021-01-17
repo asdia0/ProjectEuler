@@ -10,8 +10,33 @@
         /// <returns>31875000</returns>
         public static long Problem9()
         {
-            List<(long, long, long)> triples = GetPythogoreanTriple(1000);
+            int a, b, c = 0;
+
+            int m = 2;
+
+            List<(long, long, long)> triples = new List<(long, long, long)>();
+
+            while (c < 1000)
+            {
+                for (int o = 1; o < m; o++)
+                {
+                    a = (m * m) - (o * o);
+                    b = 2 * m * o;
+                    c = (m * m) + (o * o);
+
+                    if (c > 1000)
+                    {
+                        break;
+                    }
+
+                    triples.Add((a, b, c));
+                }
+
+                m++;
+            }
+
             long result = 0;
+
             foreach ((long, long, long) elem in triples)
             {
                 if (elem.Item1 + elem.Item2 + elem.Item3 == 1000)

@@ -1,5 +1,6 @@
 ﻿namespace ProjectEuler
 {
+    using System.Collections.Generic;
     using System.Linq;
 
     public partial class Solutions
@@ -10,7 +11,21 @@
         /// <returns>104743</returns>
         public static long Problem7()
         {
-            return GetPrimes(10001).Last();
+            List<long> result = new List<long>();
+
+            long i = 2;
+
+            while (result.Count < 10001)
+            {
+                if (IsPrime(i))
+                {
+                    result.Add(i);
+                }
+
+                i++;
+            }
+
+            return result.Last();
         }
     }
 }

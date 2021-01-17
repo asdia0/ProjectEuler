@@ -11,7 +11,17 @@
         public static long Problem10()
         {
             long sum = 0;
-            List<long> primes = GetPrimesLessThan(2000000);
+
+            List<long> primes = new List<long>();
+
+            for (int i = 0; i < 2000000; i++)
+            {
+                if (IsPrime(i))
+                {
+                    primes.Add(i);
+                }
+            }
+
             foreach (long prime in primes)
             {
                 sum += prime;
