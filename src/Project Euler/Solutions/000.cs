@@ -51,6 +51,11 @@
             return true;
         }
 
+        /// <summary>
+        /// Gets the factorial of n.
+        /// </summary>
+        /// <param name="n">The given number.</param>
+        /// <returns>The factorial of n.</returns>
         public static BigInteger Factorial(long n)
         {
             if (n == 0)
