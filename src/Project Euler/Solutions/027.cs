@@ -9,7 +9,7 @@
         /// <summary>
         /// <see href="https://projecteuler.net/problem=27">Project Euler: Problem 27</see>
         /// </summary>
-        /// <returns>Answer</returns>
+        /// <returns>-59231</returns>
         public static long Problem27()
         {
             Dictionary<(int, int), int> d = new Dictionary<(int, int), int>();

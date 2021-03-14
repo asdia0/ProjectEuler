@@ -8,7 +8,7 @@
         /// <summary>
         /// <see href="https://projecteuler.net/problem=28">Project Euler: Problem 28</see>
         /// </summary>
-        /// <returns>Answer</returns>
+        /// <returns>669171001</returns>
         public static long Problem28()
         {
             int side = (1001 - 1) / 2;
