@@ -10,7 +10,7 @@
         /// <summary>
         /// <see href="https://projecteuler.net/problem=29">Project Euler: Problem 29</see>
         /// </summary>
-        /// <returns>Answer</returns>
+        /// <returns>9183</returns>
         public static long Problem29()
         {
             HashSet<BigInteger> l = new HashSet<BigInteger>();
