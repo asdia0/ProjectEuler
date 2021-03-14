@@ -10,9 +10,10 @@ namespace ProjectEuler
     {
         public static void Test()
         {
-            decimal d = decimal.Divide(1, 6);
-            Console.WriteLine(d.ToString());
-            Console.WriteLine(d.ToString()[1]);
+            for (int i = 0; i < 100; i++)
+            {
+                Console.WriteLine($"{i}: {Solutions.TriangleNumber(i)}");
+            }
         }
     }
 }

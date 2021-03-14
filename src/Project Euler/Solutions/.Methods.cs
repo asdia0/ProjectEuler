@@ -71,5 +71,17 @@
                 return n * Factorial(n - 1);
             }
         }
+
+        public static BigInteger TriangleNumber(long n)
+        {
+            BigInteger sum = 0;
+
+            for (long i = 1; i <= n; i++)
+            {
+                sum += i;
+            }
+
+            return sum;
+        }
     }
 }
