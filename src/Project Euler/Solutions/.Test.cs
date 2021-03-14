@@ -10,10 +10,9 @@ namespace ProjectEuler
     {
         public static void Test()
         {
-            for (int i = 0; i < 100; i++)
-            {
-                Console.WriteLine($"{i}: {Solutions.TriangleNumber(i)}");
-            }
+            Console.WriteLine(Solutions.IsPandigital(20));
+
+            Console.WriteLine(Solutions.IsPandigital(123));
         }
     }
 }

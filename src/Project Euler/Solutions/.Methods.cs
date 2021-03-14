@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Numerics;
+    using System.Linq;
 
     /// <summary>
     /// Class containing all the solutions of the Project Euler problems.
@@ -93,6 +94,28 @@
                 res.Add(int.Parse(c.ToString()));
             }
             return res;
+        }
+
+        public static bool IsPandigital(int n)
+        {
+            List<int> digits = GetDigits(n);
+
+            if (digits.Distinct().Count() == digits.Count)
+            {
+                List<int> range = new List<int>();
+
+                for (int i = 1; i <= digits.Distinct().Count(); i++)
+                {
+                    if (!digits.Contains(i))
+                    {
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+
+            return false;
         }
     }
 }
