@@ -1,6 +1,7 @@
 ﻿namespace ProjectEuler
 {
     using System;
+    using System.Collections.Generic;
     using System.Numerics;
 
     /// <summary>
@@ -82,6 +83,16 @@
             }
 
             return sum;
+        }
+
+        public static List<int> GetDigits(long n)
+        {
+            List<int> res = new List<int>();
+            foreach (char c in n.ToString())
+            {
+                res.Add(int.Parse(c.ToString()));
+            }
+            return res;
         }
     }
 }
