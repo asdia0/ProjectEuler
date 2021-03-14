@@ -130,5 +130,33 @@
 
             return a | b;
         }
+
+        public static long[]? CircularNumbers(long n)
+        {
+            long[] res = new long[GetDigits(n).Count()];
+
+            res[0] = n;
+
+            for (int i = 1; i < res.Length; i++)
+            {
+                if (res[i - 1] < 10)
+                {
+                    return null;
+                }
+
+                int digit = int.Parse(res[i - 1].ToString()[0].ToString());
+
+                long result = 10 * (res[i - 1] - (digit * (long)Math.Pow(10, res.Length - 1))) + digit;
+
+                if (result < 0)
+                {
+                    return null;
+                }
+
+                res[i] = result;
+            }
+
+            return res;
+        }
     }
 }

@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace ProjectEuler
 {
+    using System.Text.Json;
     public partial class Program
     {
         public static void Test()
         {
-            Console.WriteLine(Solutions.IsPandigital(20));
-
-            Console.WriteLine(Solutions.IsPandigital(123));
+            Console.WriteLine(JsonSerializer.Serialize(Solutions.CircularNumbers(192)));
         }
     }
 }
