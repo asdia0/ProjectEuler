@@ -18,12 +18,20 @@
         public static void Main()
         {
             Console.WriteLine("Which problem would you like to check?");
-            int problem = int.Parse(Console.ReadLine());
-            Type type = typeof(Solutions);
-            MethodInfo method = type.GetMethod($"Problem{problem}");
-            Solutions c = new Solutions();
-            var result = method.Invoke(c, null);
-            Console.WriteLine($"\nProblem {problem}: {JsonConvert.SerializeObject(result)}\n\n");
+            string rl = Console.ReadLine();
+            if (rl == "t")
+            {
+                Test();
+            }
+            else
+            {
+                int problem = int.Parse(rl);
+                Type type = typeof(Solutions);
+                MethodInfo method = type.GetMethod($"Problem{problem}");
+                Solutions c = new Solutions();
+                var result = method.Invoke(c, null);
+                Console.WriteLine($"\nProblem {problem}: {JsonConvert.SerializeObject(result)}\n\n");
+            }
         }
     }
 }
