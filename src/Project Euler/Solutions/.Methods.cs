@@ -295,5 +295,24 @@
 
             return long.Parse(newN);
         }
+
+        public static bool IsPentagonal(long n)
+        {
+            int i = 1, M;
+
+            do
+            { 
+                M = (3 * i * i - i) / 2;
+                i += 1;
+            }
+            while (M < n);
+
+            return (M == n);
+        }
+
+        public static long GetPentagonalNumber(long n)
+        {
+            return ((3 * n * n) - n) / 2;
+        }
     }
 }
