@@ -38,7 +38,7 @@
         /// </summary>
         /// <param name="n">The given number.</param>
         /// <returns>True if n is a palindrome.</returns>
-        public static bool IsPalindrome(long n)
+        public static bool IsPalindrome(BigInteger n)
         {
             string snum = n.ToString();
 
