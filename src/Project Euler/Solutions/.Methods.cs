@@ -224,5 +224,25 @@
 
             return false;
         }
+
+        public static bool IsTriangular(long n)
+        {
+            if (n < 0)
+            {
+                return false;
+            }
+
+            int sum = 0;
+            for (int i = 1; sum <= n; i++)
+            {
+                sum = sum + i;
+                if (sum == n)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }

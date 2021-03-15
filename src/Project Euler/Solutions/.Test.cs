@@ -11,7 +11,7 @@ namespace ProjectEuler
     {
         public static void Test()
         {
-            Console.WriteLine(Solutions.IsRightTruncPrime(71));
+            Console.WriteLine(Solutions.IsTriangular(53));
         }
     }
 }
