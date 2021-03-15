@@ -11,7 +11,7 @@ namespace ProjectEuler
     {
         public static void Test()
         {
-            Console.WriteLine(JsonSerializer.Serialize(Solutions.GeneratePrimes(100)));
+            Console.WriteLine(JsonSerializer.Serialize(Solutions.PrimeFactors(207)));
         }
     }
 }
