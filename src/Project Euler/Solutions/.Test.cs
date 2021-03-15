@@ -11,7 +11,7 @@ namespace ProjectEuler
     {
         public static void Test()
         {
-            Console.WriteLine(Solutions.IsTriangular(53));
+            Console.WriteLine(369 / 10);
         }
     }
 }

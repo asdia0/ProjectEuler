@@ -118,6 +118,29 @@
             return false;
         }
 
+        public static bool IsPandigitalZero(long n)
+        {
+            List<int> digits = GetDigits(n);
+
+            if (digits.Distinct().Count() == digits.Count)
+            {
+                List<int> range = new List<int>();
+
+                for (int i = 0; i <= digits.Distinct().Count(); i++)
+                {
+                    if (!digits.Contains(i))
+                    {
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+
+            return false;
+        }
+
+
         public static long GCD(long a, long b)
         {
             while (a != 0 && b != 0)
@@ -243,6 +266,34 @@
             }
 
             return false;
+        }
+
+        public static bool HasDistinctDigits(long n)
+        {
+            if (GetDigits(n).Distinct().Count() == GetDigits(n).Count())
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public static long MakePandigital(long n)
+        {
+            List<int> digits = GetDigits(n).Distinct().ToList();
+            long origN = n;
+
+            string newN = string.Empty;
+
+            for (int i = 0; i < 10; i++)
+            {
+                if (!digits.Contains(i))
+                {
+                    newN = $"{i}{origN}";
+                }
+            }
+
+            return long.Parse(newN);
         }
     }
 }
