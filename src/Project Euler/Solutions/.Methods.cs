@@ -96,7 +96,7 @@
             return res;
         }
 
-        public static bool IsPandigital(int n)
+        public static bool IsPandigital(long n)
         {
             List<int> digits = GetDigits(n);
 
