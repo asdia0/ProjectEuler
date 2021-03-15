@@ -328,5 +328,20 @@
         {
             return (2 * n * n) - n;
         }
+
+        public static List<long> GeneratePrimes(long n)
+        {
+            List<long> res = new List<long>();
+
+            for (long i = 2; i <= n; i++)
+            {
+                if (IsPrime(i))
+                {
+                    res.Add(i);
+                }
+            }
+
+            return res;
+        }
     }
 }
