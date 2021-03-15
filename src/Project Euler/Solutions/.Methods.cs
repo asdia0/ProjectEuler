@@ -128,7 +128,6 @@
             return false;
         }
 
-
         public static long GCD(long a, long b)
         {
             while (a != 0 && b != 0)
@@ -358,6 +357,35 @@
             }
 
             return primes.Distinct().ToList();
+        }
+
+        public static List<long> GetPermutations(long n)
+        {
+            string s = n.ToString(); 
+            var result = Permutate(Enumerable.Range(0, s.Length), s.Length).Select(t => t.Select(i => s[i]));
+            
+            List<long> l = new List<long>();
+
+            foreach (var arr in result)
+            {
+                string r = string.Empty;
+                foreach (var item in arr)
+                {
+                    r += item.ToString();
+                }
+                l.Add(long.Parse(r));
+            }
+            l.Sort();
+            return l.Distinct().ToList();
+        }
+
+        public static IEnumerable<IEnumerable<T>> Permutate<T>(IEnumerable<T> list, int length)
+        {
+            if (length == 1) return list.Select(t => new T[] { t });
+
+            return Permutate(list, length - 1)
+                .SelectMany(t => list.Where(e => !t.Contains(e)),
+                    (t1, t2) => t1.Concat(new T[] { t2 }));
         }
     }
 }
