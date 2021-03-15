@@ -74,18 +74,6 @@
             }
         }
 
-        public static BigInteger TriangleNumber(long n)
-        {
-            BigInteger sum = 0;
-
-            for (long i = 1; i <= n; i++)
-            {
-                sum += i;
-            }
-
-            return sum;
-        }
-
         public static List<int> GetDigits(long n)
         {
             List<int> res = new List<int>();
@@ -313,6 +301,32 @@
         public static long GetPentagonalNumber(long n)
         {
             return ((3 * n * n) - n) / 2;
+        }
+
+        public static bool IsHexagonal(long n)
+        {
+            long val = 8 * n + 1;
+
+            double x = 1 + Math.Sqrt(val);
+
+            double y = x / 4;
+
+            if ((y - (int)y) == 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public static long GetTriangularNumber(long n)
+        {
+            return ((n * n) + n) / 2;
+        }
+
+        public static long GetHexagonalNumber(long n)
+        {
+            return (2 * n * n) - n;
         }
     }
 }

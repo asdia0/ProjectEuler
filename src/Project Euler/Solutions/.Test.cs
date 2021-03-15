@@ -11,9 +11,7 @@ namespace ProjectEuler
     {
         public static void Test()
         {
-            Console.WriteLine(Solutions.IsPentagonal(3));
 
-            Console.WriteLine(Solutions.IsPentagonal(22));
         }
     }
 }
