@@ -158,5 +158,71 @@
 
             return res;
         }
+
+        public static long? AddDigitRight(long n, int digit)
+        {
+            if (digit < 0 || digit > 10)
+            {
+                return null;
+            }
+
+            return (n * 10) + digit;
+        }
+
+        public static long? AddDigitLeft(long n, int digit)
+        {
+            if (digit < 0 || digit > 10)
+            {
+                return null;
+            }
+
+            return n + digit * (long)Math.Pow(10, GetDigits(n).Count);
+        }
+
+        public static long RemoveLeftDigit(long n)
+        {
+            return long.Parse(n.ToString().Remove(0, 1));
+        }
+
+        public static long RemoveRightDigit(long n)
+        {
+            return long.Parse(n.ToString().Remove(n.ToString().Count() - 1));
+        }
+
+        public static bool IsRightTruncPrime(long n)
+        {
+            while (IsPrime(n))
+            {
+                n = RemoveRightDigit(n);
+
+                if (n.ToString().Count() == 1)
+                {
+                    if (IsPrime(n))
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        public static bool IsLeftTruncPrime(long n)
+        {
+            while (IsPrime(n))
+            {
+                n = RemoveLeftDigit(n);
+
+                if (n.ToString().Count() == 1)
+                {
+                    if (IsPrime(n))
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
     }
 }

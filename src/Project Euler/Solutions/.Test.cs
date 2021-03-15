@@ -11,7 +11,7 @@ namespace ProjectEuler
     {
         public static void Test()
         {
-            Console.WriteLine(JsonSerializer.Serialize(Solutions.CircularNumbers(192)));
+            Console.WriteLine(Solutions.IsRightTruncPrime(71));
         }
     }
 }
