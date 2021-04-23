@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ProjectEuler
+﻿namespace ProjectEuler
 {
-    using System.Text.Json;
+    using System;
+
     public partial class Program
     {
         public static void Test()
         {
+            Console.WriteLine(Solutions.Factorial(0));
+            Console.WriteLine(Solutions.Choose(5, 3));
         }
     }
 }

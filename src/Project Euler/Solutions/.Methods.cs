@@ -387,5 +387,15 @@
                 .SelectMany(t => list.Where(e => !t.Contains(e)),
                     (t1, t2) => t1.Concat(new T[] { t2 }));
         }
+
+        public static BigInteger Choose(long n, long r)
+        {
+            if (r > n)
+            {
+                throw new ArgumentException("r must be less than or equal to n");
+            }
+
+            return BigInteger.Divide(Factorial(n), BigInteger.Multiply(Factorial(r), Factorial(n - r)));
+        }
     }
 }
