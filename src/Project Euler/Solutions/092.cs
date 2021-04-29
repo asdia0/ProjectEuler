@@ -7,7 +7,7 @@
         /// <summary>
         /// <see href="https://projecteuler.net/problem=92">Project Euler: Problem 92</see>
         /// </summary>
-        /// <returns>Answer</returns>
+        /// <returns>8581146</returns>
         public static long Problem92()
         {
             long count = 0;
