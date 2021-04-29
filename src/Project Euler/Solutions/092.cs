@@ -14,11 +14,6 @@
 
             for (int n = 1; n <= 10000000; n++)
             {
-                if (n % 1000000 == 0)
-                {
-                    Console.WriteLine(n);
-                }
-
                 if (_092_Sum(n) == 89)
                 {
                     count++;
