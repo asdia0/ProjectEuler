@@ -29,7 +29,7 @@
                 }
             }
 
-            return aProduct / GCD(aProduct, bProduct);
+            return aProduct / (long)GCD(aProduct, bProduct);
         }
     }
 }

@@ -128,19 +128,6 @@
             return false;
         }
 
-        public static long GCD(long a, long b)
-        {
-            while (a != 0 && b != 0)
-            {
-                if (a > b)
-                    a %= b;
-                else
-                    b %= a;
-            }
-
-            return a | b;
-        }
-
         public static long[]? CircularNumbers(long n)
         {
             long[] res = new long[GetDigits(n).Count()];
@@ -396,6 +383,19 @@
             }
 
             return BigInteger.Divide(Factorial(n), BigInteger.Multiply(Factorial(r), Factorial(n - r)));
+        }
+
+        private static BigInteger GCD(BigInteger a, BigInteger b)
+        {
+            while (a != 0 && b != 0)
+            {
+                if (a > b)
+                    a %= b;
+                else
+                    b %= a;
+            }
+
+            return a | b;
         }
     }
 }
